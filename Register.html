@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Register – ENCS3320 Tiny Webserver</title>
-    <!-- نستخدم نفس ملف الستايل تبع main_en.html -->
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+
+    <header>
+    <h1>My Tiny Webserver</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="login.html">Login</a>
+        <a href="team.jpg">Image 1</a>
+        <a href="icon.png">Image 2</a>
+    </nav>
+</header>
+
 <div class="page-container">
 
-    <!-- عنوان بسيط للصفحة -->
-    <section class="box">
-        <h1>ENCS3320 – User Registration</h1>
-        <p>Please fill the form below to create a new account.</p>
-        <p><a href="main_en.html">Back to main page</a></p>
-    </section>
-
-    <!-- فورم التسجيل -->
-    <section class="box">
+    <section class="register-box">
         <h2>Register</h2>
 
-        <!-- 
-            method="post": إرسال البيانات في body
-            action="/register": السيرفر لاحقاً يتعامل مع طلب POST /register
-            يمكنك تغييره لاحقاً إلى /register.html لو حبيتي، حسب ما تبرمجي السيرفر
-        -->
         <form method="post" action="/register">
             <div class="form-row">
                 <label for="username">Username:</label><br>
