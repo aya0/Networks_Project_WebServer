@@ -9,7 +9,7 @@ import os
 import urllib.parse
 from typing import Dict, Optional
 
-PORT = 8099
+PORT = 8088
 
 # خريطة الجلسات: sessionId -> username
 sessions: Dict[str, str] = {}
@@ -102,16 +102,13 @@ class ClientHandler:
 
     # ============ GET ============
     def handle_get(self, path: str, cookie_header: Optional[str]):
-        # Remove query string
         if '?' in path:
             path = path.split('?')[0]
 
-        # الصفحة الرئيسية
         if path in ["/", "/index.html", "/main_en.html", "/en"]:
             self.send_file_response("main_en.html", "text/html; charset=utf-8")
             return
 
-        # نسخة عربية لو عملتيها
         if path == "/ar":
             self.send_file_response("main_ar.html", "text/html; charset=utf-8")
             return
